@@ -71,7 +71,7 @@ public class SnackBar extends JFrame
                     "Login failed", "Service", JOptionPane.ERROR_MESSAGE);
         }
     }
-    
+
 
     public static void main(String[] args)
     {
