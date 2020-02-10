@@ -5,12 +5,12 @@ public class Complex {
     double rar;
 
     public Complex(double a){
-        far = a;
-        rar = 0.0;
+        first = a;
+        second = 0.0;
     }
     public Complex(double a, double b){
-        far = a;
-        rar = b;
+        first = a;
+        second = b;
 
     }
     public double abs (){
@@ -18,13 +18,19 @@ public class Complex {
         return result;
     }
     public Complex add (Complex other){
-        double addfart = far + other.far;
-        double addrart = rar + other.rar;
-        return new Complex(addfart, addrart);
+        double addfirst = first + other.first;
+        double addsecond = second + other.second;
+        return new Complex(addfirst, addsecond);
     }
     public String toString(){
         String result = far + "+" + rar + "i";
         return result;
+    }
+    public Complex multiply(Complex other){
+        double multiplyfirst = first * other.second * other.first;
+        double multiplysecond = second * other.first * other.second;
+        double
+
     }
     public static void main(String[] args){
         Complex p =  new Complex(7.2, 18.5);
