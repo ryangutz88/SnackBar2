@@ -1,8 +1,8 @@
 package com.company;
 
 public class Complex {
-    double far;
-    double rar;
+    double first;
+    double second;
 
     public Complex(double a){
         first = a;
@@ -14,7 +14,7 @@ public class Complex {
 
     }
     public double abs (){
-        double result = Math.sqrt((far*far)+ (rar*rar));
+        double result = Math.sqrt((first*first)+ (second*second));
         return result;
     }
     public Complex add (Complex other){
@@ -23,13 +23,13 @@ public class Complex {
         return new Complex(addfirst, addsecond);
     }
     public String toString(){
-        String result = far + "+" + rar + "i";
+        String result = first + "+" + second + "i";
         return result;
     }
     public Complex multiply(Complex other){
-        double multiplyfirst = first * other.second * other.first;
-        double multiplysecond = second * other.first * other.second;
-        double
+        double multiplyfirsts = (first * other.first) - (second * other.second);
+        double multiplyseconds = (first * other.second) + (other.first * second);
+        return new Complex(multiplyfirsts, multiplyseconds);
 
     }
     public static void main(String[] args){
@@ -39,6 +39,7 @@ public class Complex {
         System.out.println(s.add(p));
         System.out.println(p);
         System.out.println(s);
+        System.out.println(s.multiply(p));
 
     }
 
